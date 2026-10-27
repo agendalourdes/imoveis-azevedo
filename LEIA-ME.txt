@@ -1,0 +1,18 @@
+IMÓVEIS AZEVEDO — BIOLINK
+
+COMO COLOCAR AS FOTOS
+1. Abra a pasta assets.
+2. Coloque as fotos nessa pasta usando exatamente estes nomes (sem acentos e sem espaços):
+   - ludimila.jpg   = foto da Ludimila
+   - divino.jpg     = foto do Divino
+   - escritorio.jpg = foto real do escritório
+   - instagram.jpg  = imagem para o card do Instagram (pode ser uma foto bonita de imóvel ou uma arte da marca)
+   - site.jpg       = foto de imóvel para o card do site oficial
+   - capa.jpg       = foto principal grande do topo (opcional; se não colocar, usa a foto online de referência)
+
+IMPORTANTE:
+- As fotos devem ser JPG/JPEG e os nomes precisam ser exatamente iguais aos acima.
+- Se a imagem estiver em PNG, ou mude o nome para .png e peça para ajustar o HTML, ou converta para JPG.
+- Não apague o arquivo logo-azevedo.svg.
+- Depois de colocar as fotos, abra o index.html para conferir.
+- Esta é uma prévia local; ainda não está publicada na internet.
