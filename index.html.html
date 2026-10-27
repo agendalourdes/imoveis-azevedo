@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imóveis Azevedo | Imóveis de alto padrão</title>
+<meta name="description" content="Imóveis Azevedo — imóveis de alto padrão, residências em condomínios exclusivos e oportunidades selecionadas.">
+<meta name="theme-color" content="#080808">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--black:#080808;--panel:#121212;--gold:#c6a45c;--champ:#ead7a2;--white:#f5f1e8;--muted:#c0baae;--line:rgba(198,164,92,.3);--serif:"Cormorant Garamond",Georgia,serif;--sans:"Jost",Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font:300 17px/1.7 var(--sans);-webkit-font-smoothing:antialiased}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}.wrap{width:min(1120px,calc(100% - 36px));margin:auto}
+.hero{min-height:620px;min-height:78svh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden;background:radial-gradient(ellipse at 50% 38%,#211b10 0%,#11100d 34%,#080808 72%)}
+.hero-photo{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 42%,rgba(198,164,92,.13),transparent 54%),linear-gradient(180deg,#080808 0%,rgba(8,8,8,.3) 45%,#080808 100%)}
+.hero-photo:after{content:"";position:absolute;inset:20px;border:1px solid rgba(198,164,92,.13);pointer-events:none}
+.top{position:absolute;top:25px;left:0;right:0;display:flex;justify-content:center;z-index:2}
+.logo{width:155px;filter:drop-shadow(0 2px 12px #000)}
+.hero-content{position:relative;z-index:1;width:min(900px,calc(100% - 36px));margin:0 auto;padding:150px 0 70px;text-align:center}
+.eyebrow{font-size:.72rem;letter-spacing:.22em;text-transform:uppercase;color:var(--champ);border:1px solid var(--line);border-radius:100px;padding:10px 17px;display:inline-block;background:rgba(7,7,7,.38);backdrop-filter:blur(10px)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.04;margin:0}h1{font-size:clamp(3rem,8vw,6.5rem);letter-spacing:.015em;margin:25px 0 18px;text-shadow:0 4px 30px #000} .hero p{font-size:clamp(1rem,2vw,1.28rem);max-width:650px;margin:0 auto;color:#f1eee7}
+.section{padding:42px 0}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.card{overflow:hidden;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(28,28,28,.96),rgba(13,13,13,.96));box-shadow:0 20px 60px rgba(0,0,0,.25);transition:transform .25s,border-color .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(234,215,162,.65)}
+.photo{height:320px;position:relative;overflow:hidden;background:linear-gradient(135deg,#252019,#0e0e0e)}
+.photo img{width:100%;height:100%;object-fit:cover;transition:transform .7s}.card:hover .photo img{transform:scale(1.035)}
+.photo:after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.52));pointer-events:none}
+.location .photo img{object-position:center 48%}
+.channel-mark{height:100%;min-height:170px;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 42%,#282115 0%,#15130f 45%,#090909 100%);color:var(--champ)}
+.channel-mark svg{width:66px;height:66px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 12px rgba(198,164,92,.18))}
+.channels .card{border-color:rgba(198,164,92,.38)}
+.channels .card:hover .channel-mark svg{transform:scale(1.07)}
+.channel-mark svg{transition:transform .25s}
+.photo-placeholder{height:100%;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px;background:radial-gradient(ellipse at 50% 20%,#3a3020,#151515 68%);color:var(--champ);letter-spacing:.15em;font-size:.72rem;text-transform:uppercase}
+.card-body{padding:26px 28px 30px;display:flex;flex-direction:column;align-items:flex-start;gap:9px}
+/* Perfis em cards horizontais: foto à esquerda e informações à direita */
+.people{display:grid;grid-template-columns:1fr;gap:22px}
+.person-row{display:grid;grid-template-columns:250px minmax(0,1fr);gap:0;align-items:stretch;min-height:300px;overflow:hidden;border:1px solid var(--line);border-radius:24px;background:linear-gradient(145deg,rgba(28,28,28,.96),rgba(13,13,13,.96));box-shadow:0 20px 60px rgba(0,0,0,.22);transition:border-color .25s,transform .25s}
+.person-row:hover{border-color:rgba(234,215,162,.65);transform:translateY(-2px)}
+.person-image{height:300px;min-height:100%;display:flex;align-items:center;justify-content:center;overflow:hidden;background:linear-gradient(135deg,#252019,#0e0e0e);padding:12px}
+.person-image img{height:100%;width:100%;object-fit:contain;object-position:center center;border-radius:16px}
+.person-info{min-width:0;padding:30px 34px;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:10px}
+.person-info h3{font-size:2.45rem}
+.person-info .role{max-width:100%;line-height:1.5}
+.person-info .btn{margin-top:14px}
+@media(max-width:720px){.people{gap:18px}.person-row{grid-template-columns:38% minmax(0,1fr);min-height:230px;border-radius:18px}.person-image{height:250px;padding:8px}.person-image img{border-radius:12px}.person-info{padding:20px 16px;gap:8px}.person-info h3{font-size:1.8rem}.person-info .role{font-size:.78rem;letter-spacing:.04em}.person-info .btn{font-size:.78rem;min-height:44px;padding:10px 12px;gap:6px;margin-top:8px}}
+@media(max-width:420px){.person-row{grid-template-columns:35% minmax(0,1fr)}.person-image{height:230px;padding:6px}.person-info{padding:17px 12px}.person-info h3{font-size:1.55rem}.person-info .role{font-size:.72rem}.person-info .btn{font-size:.7rem;padding:9px 10px;white-space:normal}.person-info .icon{width:16px;height:16px;flex-shrink:0}}
+
+h2{font-size:clamp(2.2rem,5vw,3.6rem)}h3{font-size:2.2rem;color:var(--champ)}.role{color:var(--muted);letter-spacing:.09em;font-size:.9rem}.card-body p{margin:0;color:var(--muted);max-width:52ch}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:12px 22px;border-radius:100px;border:1px solid var(--gold);font-weight:500;letter-spacing:.025em;margin-top:15px;transition:all .25s}
+.btn-gold{background:linear-gradient(135deg,#f0dfad,#bd954b);color:#0a0a0a}.btn-outline{color:var(--champ);background:rgba(0,0,0,.15)}.btn:hover{transform:translateY(-2px);box-shadow:0 8px 28px rgba(198,164,92,.2)}
+.icon{width:19px;height:19px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round}
+.institutional{padding:95px 0;display:grid;grid-template-columns:.85fr 1.15fr;gap:70px;align-items:start}
+.channels{grid-template-columns:1fr;gap:14px}.channels .card{display:grid;grid-template-columns:220px minmax(0,1fr);align-items:stretch}.channels .photo{height:100%;min-height:170px}.channels .card-body{justify-content:center;padding:22px 26px}.channels h3{font-size:1.9rem}.institutional.compact{padding:58px 0 42px;gap:48px}.institutional.compact .copy p{margin-bottom:12px;font-size:.96rem;line-height:1.65}.institutional.compact .copy p:first-child{font-size:1rem}.kicker{color:var(--champ);letter-spacing:.2em;text-transform:uppercase;font-size:.72rem;margin-bottom:18px}
+.rule{width:58px;height:1px;background:var(--gold);margin-top:25px}
+.institutional h2{font-size:clamp(2.8rem,6vw,4.6rem)}.copy p{margin:0 0 18px;color:var(--muted)}.copy p:first-child{color:var(--white);font-size:1.08rem}
+.location{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;margin-bottom:28px}
+.location .photo{height:100%;min-height:330px}
+.location .card-body{justify-content:center;padding:38px}
+.address{font-style:normal;color:var(--muted)}
+footer{padding:45px 18px 35px;border-top:1px solid var(--line);text-align:center;color:var(--muted);font-size:.9rem}
+footer img{width:115px;margin:0 auto 20px}footer .links{display:flex;justify-content:center;gap:24px;margin-bottom:12px;color:var(--champ)}footer small{letter-spacing:.06em}
+@media(max-width:720px){.channels .card{grid-template-columns:1fr}.channels .photo{height:190px;min-height:190px}.channels .card-body{padding:22px}.hero{min-height:590px;min-height:76svh}.hero-content{padding:150px 0 65px}.eyebrow{font-size:.62rem;letter-spacing:.13em;line-height:1.6}.grid{grid-template-columns:1fr;gap:18px}.photo{height:270px}.institutional{grid-template-columns:1fr;gap:28px;padding:68px 0}.location{grid-template-columns:1fr}.location .photo{min-height:240px;height:240px}.location .card-body{padding:28px}.card-body{padding:23px}.logo{width:132px}}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-photo" role="img" aria-label="Residência contemporânea de alto padrão"></div>
+  <div class="top"><img class="logo" src="assets/logo-azevedo.svg" alt="Logo Imóveis Azevedo"></div>
+  <div class="hero-content">
+    <span class="eyebrow">Imóveis de alto padrão · Condomínios exclusivos</span>
+    <h1>Exclusividade<br>em cada detalhe.</h1>
+    <p>Imóveis de alto padrão para quem reconhece o valor da arquitetura, da localização e da excelência.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="section people" aria-label="Atendimento imobiliário">
+    <article class="person-row">
+      <div class="person-image"><img src="assets/ludimila.jpg" alt="Ludmila, especialista em imóveis de alto padrão"></div>
+      <div class="person-info">
+        <h3>Ludmila</h3><span class="role">Especialista em Imóveis de Alto Padrão</span>
+        <a class="btn btn-gold" href="https://wa.me/5531997700783" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.3 18.8L4 20z"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 .7c-.8-.4-1.6-1.2-2-2l.7-1-1-2L9 9z"/></svg>
+          Falar pelo WhatsApp
+        </a>
+      </div>
+      
+    </article>
+    <article class="person-row">
+      <div class="person-image"><img src="assets/divino.jpg" alt="Divino, especialista em loteamentos" loading="lazy"></div>
+      <div class="person-info">
+        <h3>Divino</h3><span class="role">Especialista em Loteamentos</span>
+        <a class="btn btn-gold" href="https://wa.me/5531994255760" target="_blank" rel="noopener">
+          <svg class="icon" viewBox="0 0 24 24"><path d="M4 20l1.3-4.2A8 8 0 1 1 8.3 18.8L4 20z"/><path d="M9 9c0 3 3 6 6 6l1-1.5-2-1-1 .7c-.8-.4-1.6-1.2-2-2l.7-1-1-2L9 9z"/></svg>
+          Falar pelo WhatsApp
+        </a>
+      </div>
+      
+    </article>
+  </section>
+
+  <section class="section grid channels" aria-label="Canais oficiais">
+    <article class="card">
+      <div class="channel-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="23"/><path d="M10 32h44M32 9c8 7 12 15 12 23S40 48 32 55M32 9c-8 7-12 15-12 23s4 16 12 23"/><path d="M16 18h32M16 46h32"/></svg></div>
+      <div class="card-body">
+        <h3>Explore nosso universo imobiliário</h3>
+        <p>Conheça nossa atuação e descubra oportunidades imobiliárias selecionadas.</p>
+        <a class="btn btn-gold" href="https://imoveisazevedo.com" target="_blank" rel="noopener">Acessar site oficial ↗</a>
+      </div>
+    </article>
+    <article class="card">
+      <div class="channel-mark" aria-hidden="true"><svg viewBox="0 0 64 64"><rect x="11" y="11" width="42" height="42" rx="12"/><circle cx="32" cy="32" r="10"/><circle cx="45" cy="19" r="2.8" fill="currentColor" stroke="none"/></svg></div>
+      <div class="card-body">
+        <h3>Imóveis Azevedo no Instagram</h3>
+        <p>Arquitetura, inspiração e oportunidades em imóveis de alto padrão.</p>
+        <a class="btn btn-outline" href="https://www.instagram.com/imoveis__azevedo/" target="_blank" rel="noopener">Acompanhar Instagram ↗</a>
+      </div>
+    </article>
+  </section>
+
+  <section class="institutional compact" aria-labelledby="about-title">
+    <div><div class="kicker">Nossa essência</div><h2 id="about-title">Excelência em cada escolha.</h2><div class="rule"></div></div>
+    <div class="copy">
+      <p>A Imóveis Azevedo seleciona imóveis de alto padrão, residências em condomínios exclusivos e oportunidades imobiliárias que unem arquitetura, localização e valorização patrimonial. Com atendimento personalizado e conhecimento de mercado, conectamos cada cliente a propriedades que refletem seu estilo de vida e seus objetivos.</p>
+    </div>
+  </section>
+
+  <section class="card location" aria-label="Nosso escritório">
+    <div class="photo"><img src="assets/escritorio.jpg" alt="Escritório da Imóveis Azevedo" loading="lazy"></div>
+    <div class="card-body">
+      <div class="kicker">Estamos à disposição</div>
+      <h3>Visite nosso escritório</h3>
+      <address class="address">Avenida Brasília, 2648 — São Benedito, Santa Luzia/MG.</address>
+      <a class="btn btn-outline" href="https://www.google.com/maps/search/?api=1&query=Avenida+Brasilia+2648+Sao+Benedito+Santa+Luzia+MG" target="_blank" rel="noopener">Como chegar ↗</a>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <img src="assets/logo-azevedo.svg" alt="Imóveis Azevedo">
+  <div class="links"><a href="https://imoveisazevedo.com" target="_blank" rel="noopener">Site oficial</a><a href="https://www.instagram.com/imoveis__azevedo/" target="_blank" rel="noopener">Instagram</a><a href="mailto:imoveisazevedomarketing@hotmail.com">E-mail</a></div>
+  <p style="margin:0 0 12px"><a href="mailto:imoveisazevedomarketing@hotmail.com">imoveisazevedomarketing@hotmail.com</a></p>
+  <small>IMÓVEIS AZEVEDO · SOFISTICAÇÃO, EXCLUSIVIDADE E EXCELÊNCIA.</small>
+</footer>
+</body>
+</html>
